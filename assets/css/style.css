@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,900');
+/* font-family: 'Orbitron', sans-serif; */
+/* layout */
+body{     
+    background: #f1f4fb url(../img/img_mainVisual01.jpg) repeat-x center top;
+    /*반복없음 중앙정렬 상단 위치, 바디에 url을 놓으면 반응형 시 배경을 메뉴에도 입힐 수 있음 */
+}
+
+#header { height: 327px; }
+#nav{display: none;}
+#tit{background-color: #fff; border-bottom: 1px solid #dbdbdb;}
+#contents .container {border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+}
+#cont_left { float: left; width: 250px;  }
+#cont_center { 
+    overflow: hidden; min-height: 1300px;  margin-right: 250px; 
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+}
+#cont_right { 
+    position: absolute;  width: 250px;
+    right: 0; top:0;
+}
+
+#footer { width: 100%; height: 200px; border-top: 1px solid #dbdbdb;}
+/* container */
+.container {position: relative; width: 1200px; margin: 0 auto;}
+
+/* quick */
+.quick {text-align: right;}
+.quick a{ color: #fff; padding: 8px 0 6px 10px; display: inline-block; 
+transition: color 0.3s ease;}
+.quick a:hover {color: #ccc;}
+
+
+/* title */
+.title { 
+    text-align: center; text-transform: uppercase; margin-top: 70px; 
+    font-family: 'Orbitron', sans-serif;
+} 
+.title p { 
+    font-size: 24px; color: #fff; background-color: #51b0dc; 
+    display: inline-block; padding: 14px 20px 10px 20px; font-weight: 900;
+} 
+.title h1 a { 
+    color: #fff; background-color: #4a9abf; padding: 14px 20px 10px 20px;
+    display: inline-block; font-weight: 400; font-size: 14px; margin-top: -7px;
+    transition: box-shadow 0.3s ease;
+} 
+.title h1 a:hover {
+    box-shadow: 
+    0 0 0 3px rgba(75,154,191,0.9) inset,
+    0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
+.icon { text-align: center; margin-top: 40px;} 
+.icon ul {}
+.icon li {display: inline;} 
+.icon li a {position: relative; display: inline-block; width: 66px; 
+    height: 66px;  background-color: #3192bf; color: #fff; font-size: 35px;
+    border-radius: 50%; /*네모모양의 모서리가 둥굴게 하는 효과*/
+}
+.icon li a i {line-height: 66px;}
+.icon li a span{ 
+    opacity:0; /*평소엔 숨기다 마우스 오버되면 보여주기 */
+    position: absolute; 
+    left: 50%; 
+    top:-40px;  /* 마우스 오버시 조금 내려오는 효과를 주기 위해 -40을 줬다가 hover시 -30으로줌*/
+    transform: translate(-50%); /*transform: translate(-50%) 가운데 정렬에 사용*/
+    font-size: 12px;  
+    background-color: #3192bf;
+    padding: 1px 9px; 
+    border-radius: 6px 0; 
+    transition: all 0.3s ease-in-out;
+}
+/*화살표 만들기*/
+.icon li a span::before { content:''; position: absolute; left:50%; bottom:-5px; margin-left: -5px;
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.icon li a:hover span{opacity: 1;top:-30px;}
+
+.ie8 .icon li a span { display: none;} /*ie8에서 위치가 이상하게 나오니 표시 안함*/
+/*nav*/
+.nav { padding: 30px 0; }
+.nav h2 {font-size: 22px; resize: 16px; color: #25a2d0; padding-bottom: 8px; text-transform: uppercase;}
+.nav li { float: left; width: 20%; padding-left: 8px; box-sizing: border-box;}
+.nav li:before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: #25a2d0; position: absolute;  left: 0;  top: 8px;}/* before는 li 앞에 네모나 가운데점  같은거 표시를 위한거*/
+.nav li a{padding: 3px; border-radius: 2px; font-size: 13px; line-height: 19px; color: #333; transition: 0.1s;}
+.nav li a:hover{background-color: #25a2d0; color:#fff;}
+
+/* tit */
+.tit {text-align: center;padding: 15px 0;}
+.tit h2{font-size: 39px; color: #0093bd; font-family: 'Nanum Brush Script'; line-height: 36px;}
+.tit .tit_btn {position: absolute; right: 0; top:0;display: inline-block; width: 66px; 
+    height: 66px;  background-color: #3192bf; color: #fff; font-size: 35px;
+    border-radius: 50%; 
+}
+.tit .tit_btn i {line-height: 66px;}
+
+.cbox { padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.cbox .cbox_tit { 
+    font-size: 20px; color: #2f7fa6; text-transform: uppercase; padding-bottom: 5px;
+}
+.cbox .cbox_desc { border-bottom: 1px dashed #dbdbdb;     
+    padding-bottom: 15px; color:#878787;
+    line-height: 18px;
+}
+.cbox.box1{  }
+.cbox.box2{  }
+.cbox.box3{  }
+.cbox.box4{  }
+.cbox.box5{  }
+.cbox.box6{  }
+.cbox.box7{  }
+.cbox.box8{  }
+.cbox.box9{  }
+
+#cont_left article:nth-child(4) {border-bottom: 0;}
+#cont_center article:nth-child(4) {border-bottom: 0;}
+#cont_right article:nth-child(4) {border-bottom: 0;}
+
+
+/*menu*/
+.menu li { position: relative; }
+.menu li a {  
+    font-size: 16px; text-transform: uppercase; color: #878787; 
+    border-bottom: 1px solid #dbdbdb; padding: 10px; display: block;
+}
+.menu li a i {position: absolute; right: 10px; top:15px;}
+
+.notice {position: relative;}
+.notice h5 {font-size: 14px; color:#2f7fa6; padding-bottom: 5px;}
+.notice li {position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 8px;}/*한줄효과 : 한줄보다 길면 ...표시*/
+.notice li::before { content:'';width: 3px; height: 3px; border-radius: 50%; background-color: #449c32;position: absolute; left:0;top:6px;}
+.notice .more {position: absolute; right: 0; top:0; color:#878787; text-transform: uppercase;font-size: 10px;}
+
+.notice2 {position: relative;}
+.notice2 h5 {font-size: 14px; color:#2f7fa6; padding-bottom: 5px;}
+.notice2 li {position: relative; overflow: hidden; text-overflow: ellipsis; padding-left: 8px; padding-bottom: 3px;
+    display: -webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp: 2;
+    line-height: 18px; height: 36px; /*두줄 효과가 안먹는 익스플로러 등을 위해 높이값 제어하여 표시*/ 
+}/*두줄효과 : 두줄보다 길면 ...표시, display:box가 중요 flex-wrap, shrink 등 중요*/
+.notice2 li::before { content:'';width: 3px; height: 3px; border-radius: 50%; background-color: #449c32;position: absolute; left:0;top:6px;}
+.notice2 .more {position: absolute; right: 0; top:0; color:#878787; text-transform: uppercase;font-size: 10px;}
+
+.blog h5 { font-size: 14px; color:#2f7fa6;padding-bottom: 3px; }
+.blog .blog_img {display: block; position: relative; margin-bottom: 5px;}
+.blog .blog_img:before {content:''; width:100%; height: 100%; background-color: RGBa(0,0,0,0);
+    position: absolute; left:0; top : 0; transition: all .3s ease-in-out; /*마우스오버시 스물스물 검정으로*/
+}
+.blog .blog_img:hover:before{ background-color:RGBa(0,0,0,0.45);}
+.blog .blog_img em{
+    opacity: 0;
+    position: absolute; left: 50%; top:50%; color:#fff; font-size: 16px;
+    transform: translate(-50%, -50%); /*정확한 가운데 정렬을 위해*/
+}
+.blog .blog_img:hover em{opacity: 1; transition: all .3s ease-in-out;}
+
+/*before와 after 차이 확인 필요*/
+.blog2 h5 { font-size: 14px; color:#2f7fa6;padding-bottom: 3px; }
+.blog2 .blog_img {display: block; position: relative; overflow: hidden;}/*overflow: hidden; 넘치는 부분 안보이게*/
+.blog2 .blog_img img{display: block; transform: scale(1,1); transition: all .3s ease-in-out;}/*이미지 오버시 조금 더 크게 */
+.blog2 .blog_img:hover img{transform: scale(1.2,1.2);}
+.blog2 .blog_img:after {content:''; width:100%; height: 100%; background-color: RGBa(0,0,0,0);
+    position: absolute; left:0; top : 0; transition: all .3s ease-in-out; /*마우스오버시 스물스물 검정으로*/
+}
+.blog2 .blog_img:hover:after{ background-color:RGBa(0,0,0,0.45);}
+.blog2 .blog_img em{
+    opacity: 0; z-index: 100;/*z-index를 줘서 겹치는 요소의 위아래 설정*/
+    position: absolute; left: 50%; top:50%; color:#fff; font-size: 16px;
+    transform: translate(-50%, -50%); /*정확한 가운데 정렬을 위해*/
+}
+.blog2 .blog_img:hover em{opacity: 1; transition: all .3s ease-in-out;}
+
+/*square*/
+
+.square {}
+.square a { position : relative ;float: left; width:19%; margin: 0.5%;}
+.square a::before {content:''; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); 
+    opacity: 0; transition: all .3s ease; z-index: 100; background: Rgba(0,0,0,0.6); padding: 3px 10px; color:#fff; border-radius: 3px;
+}
+.square a:hover:before {opacity: 1;}
+
+.square a:nth-child(1):before {content: 'blur'}
+.square a:nth-child(1) img:hover{filter: blur(3px) }
+.square a:nth-child(2):before {content: 'Brightness'}
+.square a:nth-child(2) img:hover{filter: Brightness(300%) }
+.square a:nth-child(3):before {content: 'Contrass'}
+.square a:nth-child(3) img:hover{filter: Contrass(300%) }
+.square a:nth-child(4):before {content: 'BrighGrayscale'}
+.square a:nth-child(4) img:hover{filter: BrighGrayscale(100%) }
+.square a:nth-child(5):before {content: 'Hue-rotate'}
+.square a:nth-child(4) img:hover{filter: Hue-rotate(300deg) }
+.square a:nth-child(6):before {content: 'Invert'}
+.square a:nth-child(4) img:hover{filter: Invert(100%) }
+.square a:nth-child(7):before {content: 'Opercity'}
+.square a:nth-child(4) img:hover{filter: opacity(20%) }
+.square a:nth-child(8):before {content: 'Saturate'}
+.square a:nth-child(4) img:hover{filter: Saturate(100%) }
+.square a:nth-child(9):before {content: 'Sepia'}
+.square a:nth-child(4) img:hover{filter: Sepia(100%) }
+.square a:nth-child(10):before {content: 'Drop-shadows'}
+.square a:nth-child(4) img:hover{filter: Drop-shadows(100%) }
+
+
+.square2 {}
+.square2 a { position : relative ;float: left; width:19%; margin: 0.5%;}
+.square2 a::before {content:''; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); 
+    opacity: 0; transition: all .3s ease; z-index: 100; background: Rgba(0,0,0,0.6); padding: 3px 10px; color:#fff; border-radius: 3px;
+}
+.square2 a:hover:before {opacity: 1;}
+
+.square2 a:nth-child(1):before {content: 'blur'}
+.square2 a:nth-child(1) img:hover{filter: blur(3px) }
+.square2 a:nth-child(2):before {content: 'Brightness'}
+.square2 a:nth-child(2) img:hover{filter: Brightness(300%) }
+.square2 a:nth-child(3):before {content: 'Contrass'}
+.square2 a:nth-child(3) img:hover{filter: Contrass(300%) }
+.square2 a:nth-child(4):before {content: 'BrighGrayscale'}
+.square2 a:nth-child(4) img:hover{filter: BrighGrayscale(100%) }
+.square2 a:nth-child(5):before {content: 'Hue-rotate'}
+.square2 a:nth-child(4) img:hover{filter: Hue-rotate(300deg) }
+.square2 a:nth-child(6):before {content: 'Invert'}
+.square2 a:nth-child(4) img:hover{filter: Invert(100%) }
+.square2 a:nth-child(7):before {content: 'Opercity'}
+.square2 a:nth-child(4) img:hover{filter: opacity(20%) }
+.square2 a:nth-child(8):before {content: 'Saturate'}
+.square2 a:nth-child(4) img:hover{filter: Saturate(100%) }
+.square2 a:nth-child(9):before {content: 'Sepia'}
+.square2 a:nth-child(4) img:hover{filter: Sepia(100%) }
+.square2 a:nth-child(10):before {content: 'Drop-shadows'}
+.square2 a:nth-child(4) img:hover{filter: Drop-shadows(100%) }
+
+
+/*320 /480 /600 /768 /960 /1024 /1280*/
+@media (max-width: 1280px){
+    .container { width: 100%;}
+    .row {padding: 0 15px}  /*사이즈 줄일 때 여백 처리를 위한 것 컨테이너와 로우를 함께써도 좋음*/
+    #contents .container {border: 0}
+    .tit .tit_btn {right : 5px;}
+}
+@media (max-width: 1024px){
+    .nav li { width:25%}
+}
+
+@media (max-width: 960px){
+    .nav li { width:33.3333%}
+    #cont_center {margin-right: 0; border-right: 0;}
+    #cont_right {position: static;width: 100%; border-top: 1px solid #dbdbdb;}
+    .square a {  width:24%;}
+    .square a:nth-child(5n) { display: none;}/*5의 배수 숨기기*/
+}
+@media (max-width: 768px){
+    .nav li { width:50%}
+    .square a {  width:32.3333%;}
+    .square a:nth-child(5) { display: block;}
+}
+@media (max-width: 600px){
+    .nav li { display: none;}
+    #cont_left{ float: none; width: 100%;}
+    #cont_center {border-top: 1px solid #dbdbdb;}
+    .title, .icon, .tit .tit_btn {display:none;}
+    #header {height: auto;}
+    .cbox.box1{padding: 0; border-bottom: 0;}
+    .cbox.box1 .cbox_tit{display: none;}
+    .cbox.box1 .cbox_desc{display: none;}
+    .cbox.box1 .menu li a i{display: none;}
+    .cbox.box1 .menu ul {overflow: hidden;}
+    .cbox.box1 .menu li {float: left; width: 33.3333%; text-align: center; 
+        border-right: 1px solid #dbdbdb; box-sizing: border-box;
+    }
+    .cbox.box1 .menu li a {color: #fff; text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+    .cbox.box1 .menu li:nth-child(3n) {border-right: 0;}
+    .cbox.box2 {background-color: #f1f4fb;}
+    .square a {  width:49%;}
+    .square a:nth-child(5) { display: none;}
+}
+@media (max-width: 480px){
+    .nav li { display: none;}
+}
+@media (max-width: 320px){
+    .square a {  width:98%; margin: 1%;}
+    .nav li { display: none;}
+}
